@@ -1,6 +1,6 @@
 # Software Engineering Assignment
 
-As part of our hiring process we would like to get a sense of your technical abilities and how you go about writing software. We would like you to spend approximately 2 hours total on this assignment. Under no circumstances should you spend longer than 4 hours (if you misrepresent the amount of time you spend you will likely underperform in a subsequent interview round, and waste both our time and yours, so please stick to under 4 hours). There is far more work involved than is reasonable to complete in the allotted time: **we do not expect you to finish**. We would like to see how you work, what corners you cut, what polish you apply, where you focus, and the overall approach you take as part of this assignment. (You are welcome to break up the 2 hours of work however you see fit: all in one go, two one-hour sessions, four half-hour sessions, etc.)
+As part of our hiring process we would like to get a sense of your technical abilities and how you go about writing software. We would like you to spend approximately 2 hours total on this assignment. Under no circumstances should you spend longer than 4 hours. There is far more work involved than is reasonable to complete in the allotted time: **we do not expect you to finish**. We would like to see how you work, what corners you cut, what polish you apply, where you focus, and the overall approach you take as part of this assignment. (You are welcome to break up the 2 hours of work however you see fit: all in one go, two one-hour sessions, four half-hour sessions, etc.)
 
 ## Instructions
 
@@ -20,7 +20,7 @@ Document any assumptions or shortcuts you take; feel free to simplify the proble
 1. Ships are placed vertically or horizontally on the board and may not overlap or be adjacent to another ship (touching on the diagonal is allowed).
 
 #### Game Play
-1. Prior to attacking, each player may move one undamaged ship one square along the axis the ship is placed on, or may rotate the ship 90 degrees along either end of the ship. Any movement which would result in an invalid board position (overlapping ships, adjacent ships, or off-the-board ships) is prohibited. Damaged ships cannot move or rotate. An example rotation: 
+1. Prior to attacking, each player may move one undamaged ship one square along the axis the ship is placed on, or may rotate the ship 90 degrees along either end of the ship. Any movement which would result in an invalid board position (overlapping ships, adjacent ships, or off-the-board ships) is prohibited. Damaged ships cannot move or rotate. An example rotation:
 
 ![screenshot 2017-09-11 16 31 45](https://user-images.githubusercontent.com/1891931/30308660-c84841e2-973b-11e7-8099-ce2b570faf03.png)
 

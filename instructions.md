@@ -1,14 +1,16 @@
 # Software Engineering Assignment
 
-As part of our hiring process we would like to get a sense of your technical abilities and how you go about writing software. We would like you to spend approximately 2 hours total on this assignment. Under no circumstances should you spend longer than 4 hours. There is far more work involved than is reasonable to complete in the allotted time: **we do not expect you to finish**. We would like to see how you work, what corners you cut, what polish you apply, where you focus, and the overall approach you take as part of this assignment. (You are welcome to break up the 2 hours of work however you see fit: all in one go, two one-hour sessions, four half-hour sessions, etc.)
+As part of our hiring process we would like to get a sense of your technical abilities and how you go about writing software. We would like you to spend approximately 2 hours total on this assignment. If you go a little over that's okay, but we really don't want you to spend too much time on it -- there is far more work involved than is reasonable to complete in the allotted time.
+
+We do not expect you to finish and have a fully functioning polished game at the end. Instead, we would like to see how you work, what corners you cut, what polish you apply, where you focus, and the overall approach you take as part of this assignment. (You are welcome to break up the 2 hours of work however you see fit: all in one go, two one-hour sessions, four half-hour sessions, etc.)
 
 ## Instructions
 
-We would like you to implement our version of the game battleship (see rules below). This is a two-player game and your game should support two players using separate computers. Your solution does not need to scale beyond two players. We have provided you with access to this GitHub repo which we would like you to use both while developing and for the final submission. We would like you to have your final submission within 72 hours. You are welcome to use any platforms and languages you believe suitable. If you believe we may find your choices non-standard or non-obvious, documentation of the rationale behind the decisions will be appreciated.
+We would like you to implement the game battleship (see rules below). This is a two-player game and your game should support two players using separate computers. Your solution does not need to scale beyond two players. We have provided you with access to this GitHub repo which we would like you to use both while developing and for the final submission. We would like you to have your final submission within 72 hours. You are welcome to use any platforms and languages you believe suitable. If you believe we may find your choices non-standard or non-obvious, documentation of the rationale behind the decisions will be appreciated.
 
-You are welcome to make use of open source libraries, provided these libraries do not provide solutions to the game of Battleship. For example, using Java Swing to manage your UI components or Express as a scaffold for your web service are both allowed while using an existing Battleship library would be forbidden. Using open source libraries is permitted as long as you use an explicit external dependency management system (as appropriate for your choice of technology). Do not plagiarize or copy/paste code without attribution.
+You are welcome to make use of open source libraries, provided these libraries do not provide solutions to the game of Battleship. For example, using Java Swing to manage your UI components or Express as a scaffold for your web service are both allowed while using an existing Battleship library would be forbidden. Using open source libraries is permitted as long as you use an explicit external dependency management system (as appropriate for your choice of technology). Please don't plagiarize or copy/paste code without attribution.
 
-You may also use resources on the Internet (Google, StackOverflow, etc) but you may not ask for explicit assistance from any other individual with any aspect of this assignment. This means if you run into a problem starting an http server in Golang, you may consult existing questions on Stackoverflow but may **not** post your own question (nor ask a friend for help). Needless to say, do not pair program.
+You may also use resources on the Internet (Google, StackOverflow, etc).
 
 Document any assumptions or shortcuts you take; feel free to simplify the problem if it helps.
 
@@ -20,6 +22,15 @@ Document any assumptions or shortcuts you take; feel free to simplify the proble
 1. Ships are placed vertically or horizontally on the board and may not overlap or be adjacent to another ship (touching on the diagonal is allowed).
 
 #### Game Play
+1. Players take turns calling out coordinates.
+2. The opponent responds with a "hit" or "miss" as appropriate.
+3. Both players mark their boards.
+4. When all squares occupied by a given ship are hit, the opponent responds with "hit and sunk".
+5. The game ends once all of one player's ships have been sunk.
+
+##### Bonus Rules
+If you'd like, feel free to implement these twists on the classic rules above:
+
 1. Prior to attacking, each player may move one undamaged ship one square along the axis the ship is placed on, or may rotate the ship 90 degrees along either end of the ship. Any movement which would result in an invalid board position (overlapping ships, adjacent ships, or off-the-board ships) is prohibited. Damaged ships cannot move or rotate. An example rotation:
 
 ![screenshot 2017-09-11 16 31 45](https://user-images.githubusercontent.com/1891931/30308660-c84841e2-973b-11e7-8099-ce2b570faf03.png)

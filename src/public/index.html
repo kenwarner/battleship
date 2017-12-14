@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular.min.js"></script>
+  <script src="battleship.js"></script>
+
+  <style>
+    .greeting {
+      margin: 10px 0px;
+    }
+
+    .board {
+      margin: 20px 0px;
+      border: 1px solid gray;
+    }
+
+    .board td {
+      height: 25px;
+      width: 25px;
+      border: 1px solid gray;
+    }
+
+    .cell.empty { 
+      background-color: rgb(176, 208, 238);
+    }
+    .cell.occupied { 
+      background-color: gray;
+    }
+    .cell.attacked { 
+      background-color: white;
+    }
+    .cell.struck { 
+      background-color: rgb(238, 150, 150);
+    }
+  </style>
+</head>
+
+<body ng-app="battleship">
+
+  <div ng-controller="SetupController as setup" class="setup">
+    <div class="greeting">{{setup.greeting}}</div>
+
+    <!-- this UX is obviously pretty plain due to the 2 hour constraint -->
+    <table border="1">
+        <tr><th>Name</th><th>Row</th><th>Column</th><th>Direction</th></tr>
+        <tr ng-repeat="ship in setup.ships">
+        <td><label>{{ship.name}} ({{ship.spaces}} spaces)</label></td>
+        <td><input ng-model="ship.row" ng-change="setup.arrangeBoard()" ng-disabled="!setup.BoardService.isSetupEnabled" type="number" maxlength="2" /></td>
+        <td><input ng-model="ship.column" ng-change="setup.arrangeBoard()" ng-disabled="!setup.BoardService.isSetupEnabled" type="number" maxlength="2" /></td>
+        <td><input ng-model="ship.direction" ng-change="setup.arrangeBoard()" ng-disabled="!setup.BoardService.isSetupEnabled" maxlength="1" /></td>
+      </div>
+    </tr>
+    </table>
+
+    <board></board>
+
+</body>
+
+</html>
